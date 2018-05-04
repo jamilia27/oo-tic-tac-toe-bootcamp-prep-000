@@ -70,4 +70,28 @@ def turn
   end
 end
 
+def winning_combos
+  WIN_COMBINATIONS.select do |winning_combo|
+    (@board[winning_combo[0]] == "X" && @board[winning_combo[1]] == "X" && @board[winning_combo[2]] == "X") || (@board[winning_combo[0]] == "O" && @board[winning_combo[1]] == "O" && @board[winning_combo[2]] == "O")
+  end
+end
+
+def won?
+  winning_combos.first
+end
+
+def full?(board)
+  !board.any? do |board_position|
+   board_position == " "
+  end
+end
+
+def draw?(board)
+  full?(board) && !won?(board)
+end
+
+def over?(board)
+  won?(board) || full?(board) || draw?(board)
+end
+
 end

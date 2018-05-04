@@ -80,7 +80,7 @@ def won?
   winning_combos.first
 end
 
-def full?(board)
+def full?
   !board.any? do |board_position|
    board_position == " "
   end

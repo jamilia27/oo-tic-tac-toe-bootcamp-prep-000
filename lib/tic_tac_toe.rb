@@ -81,7 +81,7 @@ def won?
 end
 
 def full?
-  !board.any? do |board_position|
+  !@board.any? do |board_position|
    board_position == " "
   end
 end

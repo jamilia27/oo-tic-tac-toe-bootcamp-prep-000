@@ -48,4 +48,13 @@ def turn_count
   return turns
 end
 
+def current_player
+  count = turn_count(@board)
+  if count.even?
+    "X"
+  else
+    "O"
+  end
+end
+
 end

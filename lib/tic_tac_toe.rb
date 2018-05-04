@@ -40,7 +40,7 @@ end
 
 def turn_count
   turns = 0
-  board.each do |board_slot|
+  @board.each do |board_slot|
     if board_slot == "O" || board_slot == "X"
       turns += 1
     end

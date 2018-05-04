@@ -94,4 +94,15 @@ def over?
   won? || full? || draw?
 end
 
+def winner
+  winning_combination = won?
+  if winning_combination == nil
+    return nil
+  elsif @board[winning_combination[0]] == "X"
+    return "X"
+  else
+    "O"
+  end
+end
+
 end

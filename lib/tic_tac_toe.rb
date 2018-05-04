@@ -87,11 +87,11 @@ def full?
 end
 
 def draw?(board)
-  full?(board) && !won?(board)
+  full? && !won?
 end
 
 def over?(board)
-  won?(board) || full?(board) || draw?(board)
+  won? || full? || draw?
 end
 
 end

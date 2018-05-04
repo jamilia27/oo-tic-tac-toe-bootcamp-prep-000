@@ -49,7 +49,7 @@ def turn_count
 end
 
 def current_player
-  count = turn_count(@board)
+  count = turn_count
   if count.even?
     "X"
   else
